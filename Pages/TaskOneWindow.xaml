@@ -1,0 +1,60 @@
+<Window x:Class="WpfVariantApp.TaskOneWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задача 1"
+        Height="380"
+        Width="650"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   TextWrapping="Wrap"
+                   FontSize="16"
+                   Text="Задача 1. Дано целое число в диапазоне от -999 до 999. Вывести его словесное описание."/>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Введите целое число от -999 до 999:"/>
+            <TextBox x:Name="txtInputNumber"
+                     Height="30"
+                     Margin="0,5,0,0"
+                     FontSize="16"/>
+        </StackPanel>
+
+        <Button x:Name="btnDescribeNumber"
+                Grid.Row="4"
+                Content="Определить"
+                Width="160"
+                Height="35"
+                HorizontalAlignment="Left"
+                Click="BtnDescribeNumber_Click"/>
+
+        <StackPanel Grid.Row="6">
+            <TextBlock Text="Результат:"/>
+            <TextBox x:Name="txtNumberDescription"
+                     Height="30"
+                     Margin="0,5,0,0"
+                     FontSize="16"
+                     IsReadOnly="True"/>
+        </StackPanel>
+
+        <Button x:Name="btnClosePage"
+                Grid.Row="7"
+                Content="Закрыть"
+                Width="100"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="BtnClosePage_Click"/>
+    </Grid>
+</Window>

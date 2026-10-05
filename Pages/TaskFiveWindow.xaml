@@ -1,0 +1,97 @@
+<Window x:Class="WpfVariantApp.TaskFiveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задача 5"
+        Height="550"
+        Width="1050"
+        WindowStartupLocation="CenterScreen">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="25">
+
+            <TextBlock FontSize="16"
+                       TextWrapping="Wrap"
+                       Text="Задача 5. Сгенерировать массив размером M столбцов и N строк, содержащий числа от -10 до 10. Отсортировать элементы по возрастанию и убыванию. Найти минимальный и максимальный элементы."/>
+
+            <WrapPanel Margin="0,20,0,10">
+                <StackPanel Width="190">
+                    <TextBlock Text="Количество строк N:"/>
+
+                    <TextBox x:Name="txtRowsCount"
+                             Height="30"
+                             Margin="0,5,0,0"
+                             FontSize="16"/>
+                </StackPanel>
+
+                <StackPanel Width="190"
+                            Margin="20,0,0,0">
+                    <TextBlock Text="Количество столбцов M:"/>
+
+                    <TextBox x:Name="txtColumnsCount"
+                             Height="30"
+                             Margin="0,5,0,0"
+                             FontSize="16"/>
+                </StackPanel>
+
+                <Button x:Name="btnGenerateAndSort"
+                        Content="Создать и отсортировать"
+                        Width="220"
+                        Height="35"
+                        Margin="20,20,0,0"
+                        Click="BtnGenerateAndSort_Click"/>
+            </WrapPanel>
+
+            <TextBlock x:Name="txtMinimumMaximum"
+                       Margin="0,10,0,10"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+
+            <TextBlock Text="Исходный массив:"
+                       Margin="0,10,0,5"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+
+            <DataGrid x:Name="dgOriginalMatrix"
+                      Height="170"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeRows="False"/>
+
+            <TextBlock Text="Массив после сортировки по возрастанию:"
+                       Margin="0,20,0,5"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+
+            <DataGrid x:Name="dgAscendingMatrix"
+                      Height="170"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeRows="False"/>
+
+            <TextBlock Text="Массив после сортировки по убыванию:"
+                       Margin="0,20,0,5"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+
+            <DataGrid x:Name="dgDescendingMatrix"
+                      Height="170"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeRows="False"/>
+
+            <Button x:Name="btnClosePage"
+                    Content="Закрыть"
+                    Width="100"
+                    Height="30"
+                    Margin="0,20,0,0"
+                    HorizontalAlignment="Right"
+                    Click="BtnClosePage_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

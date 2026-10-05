@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfVariantApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Главное меню"
+        Height="450"
+        Width="500"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Вариант № __"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="28"
+                   FontWeight="Bold"/>
+
+        <Button x:Name="btnOpenTaskOne"
+                Grid.Row="1"
+                Content="Задача 1"
+                Height="40"
+                Margin="70,5"
+                Click="BtnOpenTaskOne_Click"/>
+
+        <Button x:Name="btnOpenTaskTwo"
+                Grid.Row="2"
+                Content="Задача 2"
+                Height="40"
+                Margin="70,5"
+                Click="BtnOpenTaskTwo_Click"/>
+
+        <Button x:Name="btnOpenTaskThree"
+                Grid.Row="3"
+                Content="Задача 3"
+                Height="40"
+                Margin="70,5"
+                Click="BtnOpenTaskThree_Click"/>
+
+        <Button x:Name="btnOpenTaskFour"
+                Grid.Row="4"
+                Content="Задача 4"
+                Height="40"
+                Margin="70,5"
+                Click="BtnOpenTaskFour_Click"/>
+
+        <Button x:Name="btnOpenTaskFive"
+                Grid.Row="5"
+                Content="Задача 5"
+                Height="40"
+                Margin="70,5"
+                Click="BtnOpenTaskFive_Click"/>
+    </Grid>
+</Window>

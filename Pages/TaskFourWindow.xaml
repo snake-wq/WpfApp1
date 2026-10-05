@@ -1,0 +1,67 @@
+<Window x:Class="WpfVariantApp.TaskFourWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задача 4"
+        Height="440"
+        Width="750"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   FontSize="16"
+                   TextWrapping="Wrap"
+                   Text="Задача 4. Поменять местами первый чётный и последний отрицательный элементы массива."/>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Введите целые элементы массива через пробел:"/>
+
+            <TextBox x:Name="txtArrayElements"
+                     Height="35"
+                     Margin="0,5,0,0"
+                     FontSize="16"/>
+
+            <TextBlock Margin="0,5,0,0"
+                       Foreground="Gray"
+                       Text="Пример: 5 -3 7 8 -10 1"/>
+        </StackPanel>
+
+        <Button x:Name="btnSwapArrayElements"
+                Grid.Row="4"
+                Content="Поменять местами"
+                Width="190"
+                Height="35"
+                HorizontalAlignment="Left"
+                Click="BtnSwapArrayElements_Click"/>
+
+        <StackPanel Grid.Row="6">
+            <TextBlock Text="Результат:"/>
+
+            <TextBox x:Name="txtChangedArray"
+                     Height="80"
+                     Margin="0,5,0,0"
+                     FontSize="16"
+                     TextWrapping="Wrap"
+                     IsReadOnly="True"/>
+        </StackPanel>
+
+        <Button x:Name="btnClosePage"
+                Grid.Row="7"
+                Content="Закрыть"
+                Width="100"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="BtnClosePage_Click"/>
+    </Grid>
+</Window>
